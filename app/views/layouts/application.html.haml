@@ -1,0 +1,24 @@
+!!! 5
+%html{:lang => "en"}
+
+  %head
+    %meta{:charset => "utf-8"}
+    %title Write-Only Mode
+    %meta{:name => 'description', :content => ''}
+    = csrf_meta_tag
+
+  %body
+
+    %header
+      %h1
+        %a{:href => '/'} Write-Only Mode
+
+    #content
+      = yield
+
+    %footer
+      Write-Only Mode
+      &bull; &copy; 2011
+      %a{:href => 'http://stevenwilkin.com'} Steven Wilkin
+      &bull;
+      %a{:href => 'http://twitter.com/stevebiscuit'} Twitter
