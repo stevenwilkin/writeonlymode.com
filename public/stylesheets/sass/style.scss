@@ -1,0 +1,51 @@
+$red: #8C2318;
+$green: #88A65E;
+$blue: #066699;
+$darkblue: #02416D;
+$grey: #ededed;
+$white: #fff;
+
+body {
+	font-family: 'Ubuntu', arial, serif;
+	background-color: $grey;
+}
+
+a {
+	text-decoration: none;
+	color: $blue;
+
+	&:hover {
+		color: $red;
+	}
+}
+
+#wrapper {
+	margin: 50px auto;
+	width: 700px;
+}
+
+header {
+	font-size: 25px;
+	margin: 0 0 5px 0;
+
+	h1 {
+		font-weight: normal;
+	}
+}
+
+textarea {
+	width: 400px;
+	font-size: 16px;
+}
+
+#counter {
+	text-align: right;
+	color: $green;
+	width: 400px;
+	font-size: 20px;
+	margin: 0 0 10px 0;
+}
+
+footer {
+	margin: 20px 0 0;
+}
