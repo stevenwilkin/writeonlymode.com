@@ -27,9 +27,16 @@ a {
 header {
 	font-size: 25px;
 	margin: 0 0 5px 0;
+	float: left;
+	width: 400px;
 
 	h1 {
 		font-weight: normal;
+		float: left;
+	}
+
+	#user-info {
+		float: right;
 	}
 }
 

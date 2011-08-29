@@ -16,6 +16,12 @@
       %header
         %h1
           %a{:href => '/'} Write-Only Mode
+
+        #user-info
+          - if @current_user
+            = "@#{@current_user.name}"
+          - else
+            = link_to 'Login with Twitter', '/auth/twitter'
   
       #content
         = yield
