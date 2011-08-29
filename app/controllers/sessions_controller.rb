@@ -8,5 +8,7 @@ class SessionsController < ApplicationController
       :oauth_secret => auth['credentials']['secret']
     )
     session[:user_id] = user.id
+
+    redirect_to root_path
   end
 end
