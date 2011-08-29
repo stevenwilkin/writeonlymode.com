@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-WriteonlymodeCom::Application.config.secret_token = '356a626dd6ef5a09fe916a96ba99331b622b77828fd5c48a3fa97f465f4227a7961eb991ec853487f56d2ae179d25c826f2a8ab03a5f7226fc485cf999ba3950'
+WriteonlymodeCom::Application.config.secret_token = 'ae737060003a32669aa55b1e64f5b80365c4368efb6f3ac2b364f36e7cd7f77aae5172706278514eddebe89673f13bd96412aa7bcd5a8f633e1931c224a17fc4'
