@@ -1,5 +1,12 @@
 class SessionsController < ApplicationController
   def create
-    raise request.env["omniauth.auth"].to_yaml
+    auth = request.env["omniauth.auth"]
+    user = User.find_by_uid(auth['uid']) || User.create(
+      :uid => auth['uid'],
+      :name => auth['user_info']['nickname'],
+      :oauth_token => auth['credentials']['token'],
+      :oauth_secret => auth['credentials']['secret']
+    )
+    session[:user_id] = user.id
   end
 end
