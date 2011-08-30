@@ -11,4 +11,9 @@ class SessionsController < ApplicationController
 
     redirect_to root_path
   end
+
+  def destroy
+    @current_user = session['user_id'] = nil
+    redirect_to root_path
+  end
 end
