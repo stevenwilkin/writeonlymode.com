@@ -1,7 +1,7 @@
 var writeonly = {
 	init: function() {
 		$('#status').bind('input paste', writeonly.state);
-		writeonly.buttonState();
+		writeonly.state();
 	},
 
 	state: function() {
