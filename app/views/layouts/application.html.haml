@@ -6,30 +6,28 @@
     %title Write-Only Mode
     %meta{:name => 'description', :content => ''}
     = csrf_meta_tag
-    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Ubuntu'
     = stylesheet_link_tag 'application'
 
   %body
 
-    #wrapper
+    %nav.topbar
+      .fill
+        .container
+          %h3
+            %a{:href => '/'} Write-Only Mode
+          %ul.nav.secondary-nav
+            %li
+              - if @current_user
+                = "@#{@current_user.name} |"
+                = link_to 'Logout', logout_path
+              - else
+                = link_to 'Login with Twitter', '/auth/twitter'
 
-      %header
-        %h1
-          %a{:href => '/'} Write-Only Mode
+    %article.container
+      = yield
 
-        #user-info
-          - if @current_user
-            = "@#{@current_user.name} |"
-            = link_to 'Logout', logout_path
-          - else
-            = link_to 'Login with Twitter', '/auth/twitter'
-  
-      #content
-        = yield
-  
-      %footer
-        Write-Only Mode
-        &bull; &copy; 2011
-        %a{:href => 'http://stevenwilkin.com'} Steven Wilkin
-        &bull;
-        %a{:href => 'http://twitter.com/stevebiscuit'} Twitter
+    %footer.container
+      &copy; 2011
+      %a{:href => 'http://stevenwilkin.com'} Steven Wilkin
+      &bull;
+      %a{:href => 'http://twitter.com/stevebiscuit'} Twitter

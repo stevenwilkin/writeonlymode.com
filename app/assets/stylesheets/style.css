@@ -1,0 +1,20 @@
+article.container {
+	margin-top: 80px;
+}
+
+.form-stacked {
+	padding-left: 0;
+}
+
+textarea#status {
+	margin-bottom: 10px;
+}
+
+#controls {
+	text-align: right;
+	padding-right: 40px;
+}
+
+#controls #counter {
+	margin-right: 5px;
+}

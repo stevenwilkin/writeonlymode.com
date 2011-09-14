@@ -1,7 +1,11 @@
-#counter
-  67
-
-= form_tag root_path, :id => 'commentform' do
-  = text_area_tag 'status'
-  %br
-  = submit_tag 'Update', :class => 'submit'
+.row
+  .span10
+  
+    = form_tag root_path, :id => 'commentform', :class => 'form-stacked' do
+      %fieldset
+        = text_area_tag 'status', nil, :class => 'xxlarge'
+  
+        #controls
+          %span#counter
+            67
+          = submit_tag 'Update', :class => 'btn primary'
