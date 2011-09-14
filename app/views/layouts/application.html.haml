@@ -16,12 +16,11 @@
           %h3
             %a{:href => '/'} Write-Only Mode
           %ul.nav.secondary-nav
-            %li
-              - if @current_user
-                = "@#{@current_user.name} |"
-                = link_to 'Logout', logout_path
-              - else
-                = link_to 'Login with Twitter', '/auth/twitter'
+            - if @current_user
+              %li= link_to "@#{@current_user.name}", "http://twitter.com/#{@current_user.name}"
+              %li= link_to 'Logout', logout_path
+            - else
+              %li= link_to 'Login with Twitter', '/auth/twitter'
 
     %article.container
       = yield
