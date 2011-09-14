@@ -1,14 +1,10 @@
 var writeonly = {
 	init: function() {
-		$('#status').keyup(writeonly.keyup);
+		$('#status').bind('input paste', writeonly.state);
 		writeonly.buttonState();
 	},
 
-	keyup: function() {
-		writeonly.buttonState();
-	},
-
-	buttonState: function() {
+	state: function() {
 		var chars = $('#status').val().length;
 		var button = $('#update');
 		if((chars == 0) || (chars > 140)) {
