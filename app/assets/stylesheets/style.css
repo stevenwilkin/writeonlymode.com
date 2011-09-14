@@ -1,8 +1,5 @@
-article.container {
+form#commentform {
 	margin-top: 80px;
-}
-
-.form-stacked {
 	padding-left: 0;
 }
 
