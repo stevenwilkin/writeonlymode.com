@@ -10,6 +10,7 @@ class StatusesController < ApplicationController
 
   def update
     unless current_user
+      redirect_to root_path
       return
     end
 
@@ -22,6 +23,7 @@ class StatusesController < ApplicationController
     
     @status = params[:status]
     Twitter.update(@status)
-  end
 
+    render :index
+  end
 end

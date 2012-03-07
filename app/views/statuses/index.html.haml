@@ -1,8 +1,12 @@
+- if @status
+  .row
+    .alert-message.success.span8= "<em>Status:</em> #{@status}".html_safe
+
 %h3 Update your status
 
 .row
   .span10
-  
+
     = form_tag root_path, :id => 'commentform', :class => 'form-stacked' do
       %fieldset
         = text_area_tag 'status', nil, :class => 'xxlarge'
