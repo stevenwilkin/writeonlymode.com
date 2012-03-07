@@ -9,7 +9,7 @@ gem 'twitter'
 
 group :development do
   gem 'sqlite3-ruby', :require => 'sqlite3'
-  gem 'mongrel'
+  gem 'thin'
 end
 
 group :production do
