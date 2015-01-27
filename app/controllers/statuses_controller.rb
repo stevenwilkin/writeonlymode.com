@@ -14,15 +14,15 @@ class StatusesController < ApplicationController
       return
     end
 
-    Twitter.configure do |config|
+    client = Twitter::REST::Client.new do |config|
       config.consumer_key = ENV['TWITTER_API_KEY']
       config.consumer_secret = ENV['TWITTER_API_SECRET']
-      config.oauth_token = current_user.oauth_token
-      config.oauth_token_secret = current_user.oauth_secret
+      config.access_token = current_user.oauth_token
+      config.access_token_secret = current_user.oauth_secret
     end
     
     @status = params[:status]
-    Twitter.update(@status)
+    client.update(@status)
 
     render :index
   end
