@@ -15,8 +15,8 @@ class StatusesController < ApplicationController
     end
 
     Twitter.configure do |config|
-      config.consumer_key = 'llyJM02BwgKpYi1p82u14w'
-      config.consumer_secret = 'JzvuiMMztb5PUrGUC3oAb6HCUE4r9ecQ8GjK7cFXBLs'
+      config.consumer_key = ENV['TWITTER_API_KEY']
+      config.consumer_secret = ENV['TWITTER_API_SECRET']
       config.oauth_token = current_user.oauth_token
       config.oauth_token_secret = current_user.oauth_secret
     end
