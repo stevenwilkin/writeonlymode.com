@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     auth = request.env["omniauth.auth"]
     user = User.find_by_uid(auth['uid']) || User.create(
       :uid => auth['uid'],
-      :name => auth['user_info']['nickname'],
+      :name => auth['info']['nickname'],
       :oauth_token => auth['credentials']['token'],
       :oauth_secret => auth['credentials']['secret']
     )
