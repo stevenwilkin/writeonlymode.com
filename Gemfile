@@ -1,10 +1,10 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc8'
-gem 'haml', '3.0.25'
-gem 'sass-rails', "~> 3.1.0.rc"
+gem 'rails', '3.1.0'
+gem 'haml'
+gem 'sass-rails'
 gem 'jquery-rails'
-gem 'omniauth', '0.2.6'
+gem 'omniauth'
 gem 'twitter'
 
 group :development do
