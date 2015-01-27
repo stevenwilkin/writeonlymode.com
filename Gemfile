@@ -5,6 +5,7 @@ gem 'haml'
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'omniauth'
+gem 'omniauth-twitter'
 gem 'twitter'
 
 group :development do
